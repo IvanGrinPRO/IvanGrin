@@ -7,7 +7,7 @@ public class Ejercicios {
 
     public static void main(String[] args) {
 
-        ejercicio15();
+        ejercicio16test();
 
     }
     public static void ejercicio1(){
@@ -337,6 +337,13 @@ public class Ejercicios {
         System.out.println("Multiplicar por 10: " +c);
         System.out.println("Dividir por 2: " +d);
 
+    }
+
+    public static void ejercicio16test(){
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println("Sasha y jenia piska");
+        }
     }
 
 }
