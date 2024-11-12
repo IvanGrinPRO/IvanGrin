@@ -11,7 +11,7 @@ public class ejercicio1 {
         //ejercicio3();
         //ejercicio4();
         //ejercicio5();
-        ejercicio6();
+        //ejercicio6();
 
     }
     public static void ejercicio01(){
@@ -145,10 +145,18 @@ public class ejercicio1 {
         int random_number = 0;
         int todas_leteras = 0;
         int medio_leteras = 0;
+        int mayuskulas = 0;
+        int minuskulas = 0;
+        String palabraMasGrande = "";
+        String palabramaspequena = "";
 
         for (int i = 0; i < palabras.length; i++) {
-
             palabras[i] = lectorTeclado.next();
+            if (palabras[i].lenght > PalabraMasGrande){
+                palabraMasGrande = palabras[i];
+            } else if (palabras[i].lenght() < palabramaspequena.lenght()) {
+                palabramaspequena = palabras[i];
+            }
 
         }
 
@@ -163,6 +171,14 @@ public class ejercicio1 {
             System.out.println("6.Ver palabra con menos letras");
             System.out.println("7.Salir de sistema");
             operacion = lectorTeclado.nextInt();
+
+            for (int i=0; i < palabras.length; i++){
+                for (int n=0; n <palabras.length; n++){
+                    palabras[n].length
+
+                }
+
+            }
 
             switch (operacion) {
                 case 1:
@@ -186,6 +202,10 @@ public class ejercicio1 {
 
                     medio_leteras = todas_leteras / palabras.length;
             }
+                case 5:
+                    System.out.println(palabraMasGrande);
+                case 6:
+                    System.out.printf(palabramaspequena);
 
 
         } while ( operacion == 7);
