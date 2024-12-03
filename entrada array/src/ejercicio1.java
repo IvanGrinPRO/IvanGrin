@@ -12,6 +12,12 @@ public class ejercicio1 {
         //ejercicio4();
         //ejercicio5();
         //ejercicio6();
+        //ejercicio7();
+        //ejercicio8();
+        //ejercicio9();
+        //ejercicio10();
+        //ejercicio11();
+        ejercicio12();
 
     }
     public static void ejercicio01(){
@@ -152,9 +158,12 @@ public class ejercicio1 {
 
         for (int i = 0; i < palabras.length; i++) {
             palabras[i] = lectorTeclado.next();
-            if (palabras[i].lenght > PalabraMasGrande){
+        }
+
+        for (int i = 0; i < palabras.length; i++) {
+            if (palabras[i].length() > palabraMasGrande.length()){
                 palabraMasGrande = palabras[i];
-            } else if (palabras[i].lenght() < palabramaspequena.lenght()) {
+            } else if (palabras[i].length() < palabramaspequena.length()) {
                 palabramaspequena = palabras[i];
             }
 
@@ -172,13 +181,6 @@ public class ejercicio1 {
             System.out.println("7.Salir de sistema");
             operacion = lectorTeclado.nextInt();
 
-            for (int i=0; i < palabras.length; i++){
-                for (int n=0; n <palabras.length; n++){
-                    palabras[n].length
-
-                }
-
-            }
 
             switch (operacion) {
                 case 1:
@@ -201,15 +203,135 @@ public class ejercicio1 {
                 case 4:
 
                     medio_leteras = todas_leteras / palabras.length;
-            }
                 case 5:
                     System.out.println(palabraMasGrande);
+
                 case 6:
                     System.out.printf(palabramaspequena);
 
+            }
 
         } while ( operacion == 7);
 
     }
 
+
+    public static void ejercicio8(){
+        String[] list = new String[10];
+
+        for(int i = 0; i < list.length; i++){
+            list[i] = lectorTeclado.next();
+        }
+        for ( String item : list){
+            System.out.println(item);
+        }
+    }
+
+    public static void ejercicio9(){
+
+        double average_number;
+        int total_amount = 0;
+        int[] random_numbers = new int[20];
+
+
+        for (int i = 0; i < random_numbers.length; i++) {
+            random_numbers[i] = (int) (Math.random() * 101);
+            total_amount += random_numbers[i];
+        }
+
+        average_number = total_amount / random_numbers.length;
+
+        System.out.println("medio de todos los numeros: "  +average_number);
+
+    }
+
+    public static void ejercicio10(){
+
+        String[] names = {"Alex", "Guillermo", "Ivan", "Alex", "Alejandro",
+                         "Arturo", "Eugenio", "Rubben", "Daniel", "Julia"};
+
+        int random_number = (int) (Math.random() * names.length);
+
+        System.out.println(names[random_number]);
+
+        }
+
+    public static void ejercicio11(){
+
+        int[] list1 = new int[10];
+        int[] list2 = new int[10];
+        int sumary = 0;
+
+
+        for (int i = 0; i < list1.length; i++) {
+
+            list1[i] = (int) (Math.random() * 6);
+            list2[i] = (int) (Math.random() * 6);
+
+
+            if (list1[i] == list2[i]){
+
+                sumary++;
+
+            }
+        }
+
+       for (int item : list1){
+
+           System.out.printf("%d ", item);
+       }
+
+        System.out.println();
+
+       for (int item : list2){
+
+           System.out.printf("%d ", item);
+
+       }
+
+        System.out.println();
+        System.out.println("son iguales "+sumary);
+
+    }
+
+    public static void ejercicio12(){
+
+
+        String[] palabras = {"Leche", "Bocadillo", "CocaCola", "Chocolate", "Patatas",
+                            "Protein", "Creatina", "Trenbalone", "Testosteron", "Methan"};
+
+        String biggestword = "";
+        int total_leters = 0;
+        String shortestword = palabras[0];
+
+
+        for (String palabra : palabras){
+
+            int length = palabra.length();
+            total_leters += length;
+
+            if (length > biggestword.length()){
+                biggestword = palabra;
+            }
+
+            if (length < shortestword.length()){
+                shortestword = palabra;
+            }
+            System.out.println(total_leters);
+
+        }
+
+        System.out.printf("La palabra mas grande es: %s\nLa palabra mas pequena es: %s\nNumero de todas leteras es: %d",
+                biggestword, shortestword, total_leters);
+
+    }
+
+    public static void ejercicio13(){
+
+
+
+    }
+
+
 }
+
