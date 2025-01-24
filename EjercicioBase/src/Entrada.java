@@ -13,6 +13,7 @@ public class Entrada {
 
         Humano humano = new Humano("Eugenio","Pendiur","Y0293948H",17,82,187);
         humano.mostrarDatos();
+        humano.Imc();
 
         System.out.println("Nombre :");
         String n = lectorTeclado.next();
@@ -30,6 +31,11 @@ public class Entrada {
 
         Humano humano1 = new Humano(n,a,d,e,p,al);
         humano1.mostrarDatos();
+        humano1.Imc();
+
+        Humano humano2 = new Humano();
+        humano2.mostrarDatos();
+        humano2.Imc();
 
 
     }

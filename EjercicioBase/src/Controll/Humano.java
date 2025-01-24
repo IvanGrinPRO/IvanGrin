@@ -44,6 +44,12 @@ public class Humano {
         // peso altura ...
     }
 
+    public double Imc(){
+
+        double imc  = peso/Math.pow(altura,2);
+        return imc;
+
+    }
 
 
     public String getNombre() {
